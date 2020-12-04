@@ -1,9 +1,0 @@
-# *****************************生产环境*****************************
-
-# 数据库
-spring:
-  datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/scaffold?useUnicode=true&useSSL=true&autoReconnect=true&allowMultiQueries=true&characterEncoding=utf8
-    username: root
-    password: root

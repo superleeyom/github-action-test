@@ -16,11 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <mybatis-plus>3.4.0</mybatis-plus>
         <hutool-all>5.4.7</hutool-all>
-        <javamelody.version>1.85.0</javamelody.version>
-        <validation-api.version>2.0.1.Final</validation-api.version>
-        <hibernate-validator.version>6.1.5.Final</hibernate-validator.version>
     </properties>
 
     <dependencies>
@@ -40,38 +36,11 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <!-- mybatis-plus -->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>${mybatis-plus}</version>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
         <!-- hutool-all -->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>${hutool-all}</version>
-        </dependency>
-        <!--monitor-->
-        <dependency>
-            <groupId>net.bull.javamelody</groupId>
-            <artifactId>javamelody-spring-boot-starter</artifactId>
-            <version>${javamelody.version}</version>
-        </dependency>
-        <!-- validator -->
-        <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-            <version>${validation-api.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.validator</groupId>
-            <artifactId>hibernate-validator</artifactId>
-            <version>${hibernate-validator.version}</version>
         </dependency>
     </dependencies>
 
