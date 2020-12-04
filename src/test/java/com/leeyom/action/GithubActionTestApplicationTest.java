@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileWriter;
 
 @SpringBootTest
 class GithubActionTestApplicationTest {
@@ -13,19 +13,17 @@ class GithubActionTestApplicationTest {
     void contextLoads() {
         System.out.println("hello world!");
         System.out.println("hello github action!");
-        System.out.println("开始读取 README.md =======================================");
+        System.out.println("开始写入 README.md =======================================");
         try {
-
+            String writerContent = "## hello world,你好世界";
             File file = new File("README.md");
-            FileReader reader = new FileReader(file);
-            char[] bb = new char[1024];
-            StringBuilder str = new StringBuilder();
-            int n;
-            while ((n = reader.read(bb)) != -1) {
-                str.append(new String(bb, 0, n));
+            if (!file.exists()) {
+                file.createNewFile();
             }
-            reader.close();
-            System.out.println("README内容：" + str.toString());
+            FileWriter writer = new FileWriter(file);
+            writer.write(writerContent);
+            writer.flush();
+            System.out.println("写入完毕 =======================================");
         } catch (Exception e) {
             e.printStackTrace();
         }
